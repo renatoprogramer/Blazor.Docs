@@ -47,6 +47,8 @@ The Blazor client-side router uses route parameters to populate the correspondin
 
 Optional parameters aren't supported yet, so two `@page` directives are applied in the example above. The first permits navigation to the component without a parameter. The second `@page` directive takes the `{text}` route parameter and assigns the value to the `Text` property.
 
+**Important:** For working routes to work properly you need to add the `base` tag in your `index.html` document, this tag is necessary for the URL to be generated correctly. If you have problems with routes try to add the following example `<base href="/" />`.
+
 ## NavLink component
 
 Use a NavLink component in place of HTML **\<a>** elements when creating navigation links. A NavLink component behaves like an **\<a>** element, except it toggles an `active` CSS class based on whether its `href` matches the current URL. The `active` class helps a user understand which page is the active page among the navigation links displayed.
